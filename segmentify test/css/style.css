@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins';
+    font-size: large;
+}
+
+
+body{
+    background:#eee ;
+}
+
+.container{
+    background-color: white;
+    height: 80px;
+}
+
+.container .text{
+    color: black;
+    font-weight: bolder;
+    padding-left: 2.5%;
+    padding-top: 2%;
+}
+
+
+.column {
+    float: left;
+    width: 18%;
+    padding: 10px;
+    height: 500px; 
+    
+}
+
+.column2 {
+    float: left;
+    width: 82%;
+    padding: 10px;
+    height: 800px; 
+    
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ 
+
+
+  nav ul{
+    background:white;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  nav ul li{
+    line-height: 60px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li:last-child{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  nav ul li a{
+    position: relative;
+    color:grey;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+  }
+ 
+  nav ul li a:hover{
+    background:skyblue;
+    border-left-color: darkblue;
+  }
+  nav ul ul{
+    position: static;
+    display: none;
+  }
+ 
+  nav ul ul li{
+    line-height: 42px;
+    border-top: none;
+  }
+  nav ul ul li a{
+    font-size: 17px;
+    color: grey;
+    padding-left: 80px;
+  }
+
+  .card {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height:400px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 16px;
+    padding-top: 10px;
+    line-height: 40px;
+    
+  }
+  
+  .price {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color:gainsboro;
+    width: 200px;
+  
+  }
+  
+  .card button {
+  background-color:#4169E1;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 30px 30px;
+  cursor: pointer;
+  border-radius: 16px;
+  width: 200px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .cargo{
+    text-align: left;
+    font-size:medium;
+    padding-left: 4%;
+  }
+
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: black;
+    width: 400px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    color: white;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
